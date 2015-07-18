@@ -1,0 +1,104 @@
+#######
+	Simple cheat sheet in yamlish format for git.
+	Use
+		cmd: <command>
+		what: <description>
+		beware: <anything that you wish to highlight>
+		url:  <more detailed information etc>
+#######
+
+resources
+	url:	https://git-scm.com
+
+#######
+commit all local changes in tracked files
+	cmd:	git commit -a
+
+add some changes to the next commit
+	cmd:	git add -p <file>
+
+change the last commit
+	cmd:	git commit --amend
+	
+show changes over time for a specific file
+	cmd:	git log --author=<committer name>
+
+store changes temporarily
+	cmd:	git stash
+	
+remove and apply stashed changes
+	cmd:	git stash pop
+	
+list all existing branches
+	cmd:	git branch
+	
+switch HEAD branch
+	cmd:	git checkout <branch>
+	what:	HEAD as in "current branch"
+	beware:	HEAD can refer to a specific revision that is not associated with a branch name -> detached HEAD
+	url:	http://git-scm.com/docs/git-checkout#_detached_head
+	
+create a new branch based on current HEAD
+	cmd:	git branch --track <new-branch> <remote-branch>
+	
+delete a local branch
+	cmd:	git branch -d <branch>
+	
+delete a remote branch
+	cmd:	git push origin --delete <branch>
+	
+tag the current commit
+	cmd:	git tag <tag-name>
+
+list all currently configured remotes
+	cmd:	git remote -v
+
+show information about remote
+	cmd:	git remote show <remote>
+
+add new remote repository
+	cmd:	git remote add <remote> <url>
+
+download all changes from REMOTE, but do not merge into HEAD
+	cmd:	git fetch <remote>
+	
+download all changes from REMOTE, do not merge into HEAD and clean up deleted branches from ORIGIN
+	cmd:	git fetch -p <remote>
+	
+download changes and merge into HEAD
+	cmd:	git pull <remote> <branch>
+	
+publish local changes on a remote
+	cmd:	git push <remote> <branch>
+	
+publish tags
+	cmd:	git push --tags
+	
+merge branch into current HEAD
+	cmd:	git merge <branch>
+
+rebase current HEAD onto branch
+	cmd:	git rebase <branch>
+	
+abort rebase
+	cmd:	git rebase --abort
+
+continue rebase after resolving conflicts
+	cmd:	git rebase --continue
+	
+discard all local changes in a working directory
+	cmd:	git reset --hard HEAD
+
+discard local changes in a specific file
+	cmd:	git checkout HEAD <file>
+	
+revert a commit by providing a new commit
+	cmd:	git revert <commit>
+
+restore a specific file from a previous commit
+	cmd:	git checkout <commit> <file>
+
+commit with an empty message
+	cmd:	git commit -a --allow-empty-message -m " "
+
+	
