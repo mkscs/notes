@@ -3,6 +3,7 @@ rename-session main
 rename-window main
 split-window -h
 split-window -v
+set-option -g status-position top
 set -g status-bg black
 set-option -g status-fg colour2
 set -g pane-active-border-style fg=blue
