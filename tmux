@@ -22,6 +22,6 @@ set-option -g pane-border-bg default
 
 set -g history-limit 5000
 set-option -g allow-rename off
-set display-panes-time 5000 # 5 seconds
+set -g display-panes-time 5000 # 5 seconds
 
 
